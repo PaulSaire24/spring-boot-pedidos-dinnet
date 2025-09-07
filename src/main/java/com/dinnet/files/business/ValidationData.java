@@ -25,6 +25,7 @@ public class ValidationData {
         List<String> pedidos =  numberOrders.stream()
                 .map(p -> p.get("numero_pedido"))
                 .toList();
+
         Integer count = countDataFailAboutNumPedido(pedidos,requests);
         List<RequestFile> requestfinal = requests.stream()
                 .filter(p -> !pedidos.contains(p.getNumeroPedido()))

@@ -80,6 +80,8 @@ public class UploadFileToDatabase implements UploadService {
                     idempotence.setCreatedAt(LocalDateTime.now());
                     idempotenceRepository.save(idempotence);
 
+
+
                     Map<String,Integer> mapErrorFechas = Map.of("Error acerca de fecha de entrega", counFailsFechaEntrega,
                             "Error acerca Numero Pedidos repetidos", counFailsNumPedido,
                             "Error acerca Numero Clientes no existentes", counFailsCLient,
